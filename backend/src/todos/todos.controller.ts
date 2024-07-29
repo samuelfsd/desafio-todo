@@ -26,7 +26,7 @@ export class TodosController {
     return this.todosService.findAll(+id);
   }
 
-  @Delete(':userId/:todoId')
+  @Delete('/:userId/:todoId')
   remove(@Param('userId') userId: string, @Param('todoId') todoId: string) {
     this.todosService.remove(+userId, +todoId);
   }
