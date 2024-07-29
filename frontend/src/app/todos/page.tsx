@@ -85,7 +85,6 @@ export default function Todos() {
     const fetchSession = async () => {
       const session = await getSession();
       if (session) {
-        console.log('Session user:', session);
         setUser(session);
       }
     };
@@ -106,7 +105,6 @@ export default function Todos() {
         });
 
         const data = await response.json();
-        console.log('data', data);
         setTodos(data);
       } catch (err) {
         toast({
