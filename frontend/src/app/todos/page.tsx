@@ -93,7 +93,7 @@ export default function Todos() {
 
   useEffect(() => {
     const fetchTodos = async () => {
-      if (!user.token) return; // Aguarde até que o token esteja disponível
+      if (!user.token) return
 
       try {
         const response = await fetch(`http://localhost:3333/todos/${user.id}` , {
